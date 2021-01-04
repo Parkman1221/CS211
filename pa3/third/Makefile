@@ -1,0 +1,8 @@
+all : third
+
+third : third.c
+	gcc -Wall -Werror -fsanitize=address -std=c11 -g third.c -o third -lm
+
+clean :
+	rm -f third
+
